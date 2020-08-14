@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "FPmonitor",
+  "version": "1.0.1",
+  "description": "Logs FP API calls",
+  "offline_enabled": true, // ??
+  "permissions": [
+    "activeTab", // for interacting with the content script for eg. message passing
+    "tabs", // for having access to the chrome API for extracting information 
+            // with eg. postMessage()
+    "http://0.0.0.0/",
+    "https://0.0.0.0/"
+  ],
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "run_at": "document_start", // inject script before everything in DOM
+    "js": ["content.js"]
+  }],
+  "icons": { 
+      "128" : "/icons/icon_red_128.png",
+      "128" : "/icons/icon_yellow_128.png",
+      "128" : "/icons/icon_green_128.png"
+  },
+  "browser_action": {
+    "default_title": "FPmonitor",
+    "default_icon": "/icons/icon_grey_128.png",
+    "default_popup": "popup.html"
+  }
+}

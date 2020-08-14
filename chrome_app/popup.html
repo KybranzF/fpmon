@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>fpmon</title>
+    <style>
+    body {
+      font-size: 13.5px;
+      min-width: 10px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      min-width:150px;
+      padding: 6px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      vertical-align: text-top;
+    }
+    ul {
+      padding-left: 20px;
+      margin-top: 7px;
+    }
+
+    </style>
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <!-- <h3 style="font-weight:bold; text-align:center;">fpmon DOM Metrics</h3> -->
+    <table border="0" cellpadding="3">
+      <tr>
+        <td><b>Domain</b></td>
+        <td align="left"><span id="url">no page loaded</span></td>
+      </tr>
+      <td><b>Features tracked</b></td>
+      <td align="left"><span id="coverage">0% (0/122)</span></td>
+    </tr>
+    <tr>
+      <td><b>Feature Categories</b></td>
+      <td align="left"><span id="categories">0% (0/40)</span></td>
+    </tr>
+    <tr>
+      <td><b>Aggressive features</b></td>
+      <td align="left"><span id="aggressive_coverage">0% (0/0)</span></td>
+    </tr>
+    <!-- <tr>
+      <td><b>Aggressiveness</b></td> 
+      <td align="left"><span id="aggressive_categories">0% (0/0)</span></td>
+    </tr> -->
+    <tr>
+      <td style="border-bottom: 0px;"> <!-- colspan="2"  -->
+        <b>Features Categories</b>
+      <!-- <td align="left"><span id="fingerprint_categories">N/A</span></td> -->
+        <ul id="fingerprint_categories">
+        </ul>
+
+      </td>
+      <td style="border-bottom: 0px;"> 
+        <b>Aggressive features</b>
+        <ul id="fingerprint_categories_aggro"></ul>
+      </td>
+    </tr>
+    <!-- <tr>
+      <td>fingerprint hash</td>
+      <td align="left"><span id="fingerprint">N/A</span></td>
+    </tr> -->
+  </table>
+
+<!-- Links do not work ... -->
+<!--   Learn more about 
+  <a href="https://en.wikipedia.org/wiki/Device_fingerprint" title="Link to our research paper on web device fingerprinting">Fingerprinting</a> 
+ -->
+</body>
+</html>
